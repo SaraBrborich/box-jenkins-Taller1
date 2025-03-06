@@ -18,23 +18,31 @@ El taller tiene como finalidad:
 | 📌 Estructura del código y flujo lógico | ✅ Completo |
 | 📊 Gráfico de la serie | ✅ Implementado |
 | 📈 Cálculo y gráficos de ACF y PACF | ✅ Implementado |
-| 🏆 Cálculo de AIC y SBC | 🔄 En proceso |
-| ⚙️ Selección de modelo basado en ACF/PACF | 🔄 En proceso |
-| 🛠 Estimación del modelo ARMA | ⏳ Pendiente |
-| 📊 Diagnóstico de residuos y prueba de ruido blanco | ⏳ Pendiente |
+| 🏆 Cálculo de AIC y SBC | ✅ Implementado |
+| ⚙️ Selección de modelo basado en ACF/PACF | ✅ Implementado |
+| 🛠 Estimación del modelo ARMA | ✅ Implementado |
+| 📊 Diagnóstico de residuos y prueba de ruido blanco | 🔄 En proceso |
 | 🔮 Evaluación del poder predictivo (forecasting) | ⏳ Pendiente |
 
 ---
 
 ## 📈 **Metodología Implementada**
-Hasta el momento, se han desarrollado funciones para:
-- **Graficar la serie** para inspección visual de tendencias y estacionalidad.
-- **Calcular y graficar la ACF y PACF** con intervalos de confianza para la selección del modelo.
-- **Identificar rezagos significativos** y guiar la elección entre modelos AR, MA o ARMA.
+Se ha desarrollado un enfoque manual para la implementación de la metodología de **Box-Jenkins**, permitiendo el análisis de series de tiempo sin depender de funciones predefinidas en paquetes estadísticos. 
+
+Las funcionalidades implementadas incluyen:
+- **Visualización de la serie** para identificar tendencias y patrones.
+- **Cálculo y gráficos de la ACF y PACF** con intervalos de confianza para guiar la selección del modelo.
+- **Identificación de rezagos significativos** y elección entre modelos AR, MA o ARMA.
+- **Estimación de modelos ARMA** utilizando **Máxima Verosimilitud (MLE)**.
+- **Cálculo manual de los criterios de información** (AIC y BIC) bajo estimaciones por MLE y Mínimos Cuadrados Ordinarios (MCO).
 
 ### 🔄 **Próximos Pasos**
-- Implementar el cálculo manual de **AIC y BIC** para evaluar modelos.
-- Ajustar modelos ARMA utilizando **MCO y Máxima Verosimilitud**.
-- Validar modelos con diagnóstico de residuos y forecasting.
+- **Diagnóstico de residuos** mediante:
+  - Prueba de **Ljung-Box** para evaluar la independencia de los residuos.
+  - Gráficos de **ACF y PACF de los residuos** para verificar la presencia de correlación.
+  - Análisis de la **media y varianza de los residuos** para detectar heterocedasticidad.
+- **Generación de pronósticos** en diferentes horizontes de tiempo.
+- Incorporar la comparación de modelos ARMA en base a sus errores de predicción.
+- Ajustar la presentación de resultados con visualizaciones mejoradas para facilitar el análisis.
 
 ---
